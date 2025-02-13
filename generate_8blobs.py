@@ -7,6 +7,11 @@ import pennylane as qml
 
 np.random.seed(66)
 
+if not os.path.exists('./datasets'):
+    os.makedirs('./datasets')
+if not os.path.exists('./data'):
+    os.makedirs('./data')
+
 ###### SETTINGS #######
 num_samples_train = 5000
 num_samples_test = 10000

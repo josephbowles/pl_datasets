@@ -4,6 +4,11 @@ import os
 import numpy as np
 import pennylane as qml
 
+if not os.path.exists('./datasets'):
+    os.makedirs('./datasets')
+if not os.path.exists('./data'):
+    os.makedirs('./data')
+
 # Define the URL and file names
 url = "https://zenodo.org/records/7250436/files/datasets.tar.gz?download=1"
 file_name = "./data/dwave_data.tar.gz"

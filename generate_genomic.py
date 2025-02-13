@@ -7,6 +7,11 @@ import pennylane as qml
 
 np.random.seed(666)
 
+if not os.path.exists('./datasets'):
+    os.makedirs('./datasets')
+if not os.path.exists('./data'):
+    os.makedirs('./data')
+
 def load_data_skip_columns(filename):
     # Load the data file, skipping the first two columns
     data = pd.read_csv(filename, delim_whitespace=True, header=None)

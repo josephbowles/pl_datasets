@@ -7,6 +7,11 @@ import pennylane as qml
 np.random.seed(42)
 numpyro.set_host_device_count(8)
 
+if not os.path.exists('./datasets'):
+    os.makedirs('./datasets')
+if not os.path.exists('./data'):
+    os.makedirs('./data')
+
 T = 3  # Temperature
 burn_in = 50000
 num_samples_per_chain = 1000000

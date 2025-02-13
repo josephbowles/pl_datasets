@@ -4,6 +4,11 @@ import numpy as np
 import os
 import pennylane as qml
 
+if not os.path.exists('./datasets'):
+    os.makedirs('./datasets')
+if not os.path.exists('./data'):
+    os.makedirs('./data')
+
 # Download MNIST dataset
 dataset = torchvision.datasets.MNIST(root='./data/mnist', train=True, download=True)
 

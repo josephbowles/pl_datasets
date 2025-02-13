@@ -9,6 +9,11 @@ import networkx as nx
 import pennylane as qml
 np.random.seed(666)
 
+if not os.path.exists('./datasets'):
+    os.makedirs('./datasets')
+if not os.path.exists('./data'):
+    os.makedirs('./data')
+
 # Generates a dataset with correlations based on the Barabasi-Albert scale free graph construction
 
 # Numpyro usually treats the CPU as 1 device
